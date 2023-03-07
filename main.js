@@ -231,7 +231,7 @@ const data = [
         },
       },
     ],
-    tables:[]
+    tables: [],
   },
   {
     name: "organization branch",
