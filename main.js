@@ -595,9 +595,6 @@ const displayGlobalInfo = () => {
   }</b>
 </li>
 <li class="flex flex-wrap gap-1">
-<span class="w-32">Pages/screens</span><b>${selectedPart.pages_count}</b>
-</li>
-<li class="flex flex-wrap gap-1">
 <span class="w-32">Forms Count:</span><b>${selectedPart.forms.length}</b>
 </li>
 <li class="flex flex-wrap gap-1">
