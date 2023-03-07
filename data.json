@@ -1,0 +1,288 @@
+{
+  "Routes": [
+    {
+      "name": "configuration",
+      "pages_count": 4,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "convert",
+          "steps": 1,
+          "fields": {
+            "points": "number",
+            "currency": "number",
+            "have cashback": "boolean",
+            "cashback description": "text"
+          }
+        },
+        {
+          "type": "Add",
+          "steps": 1,
+          "fields": {
+            "name": "text",
+            "online order": "percentage",
+            "referral": "unknown",
+            "pick from store": "percentage",
+            "min punchers": "number | unknown",
+            "Max punchers": "number | unknown",
+            "status": "boolean"
+          }
+        }
+      ],
+      "tables": [
+        [
+          "name",
+          "online order",
+          "referral",
+          "pick from store",
+          "min punchers",
+          "Max punchers",
+          "status"
+        ]
+      ]
+    },
+    {
+      "name": "configuration coins",
+      "pages_count": 3,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "add",
+          "steps": 1,
+          "fields": {
+            "select type": "multi select",
+            "achievements": "multi select",
+            "coins": "number"
+          }
+        }
+      ],
+      "tables": [["id", "type", "achievements", "coins", "availability"]]
+    },
+    {
+      "name": "Events",
+      "pages_count": 6,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "Add an event",
+          "steps": 2,
+          "fields": {
+            "Event image": "img",
+            "Event name": "text",
+            "Description": "text",
+            "select date": "multi select",
+            "start at": "multi select",
+            "end at": "multi select",
+            "host": "multi select",
+            "Event state": "multi select",
+            "Event videos": "gallery",
+            "Event products": "multi select",
+            "tags (category)": "Multi choose",
+            "selected products": "relationship"
+          }
+        },
+        {
+          "type": "Ask for Event",
+          "steps": 1,
+          "fields": {
+            "Advertisement banner": "img",
+            "coins": "number",
+            "Event image": "img",
+            "Event name": "text",
+            "Description": "text",
+            "Event videos": "gallery",
+            "Event products": "multi select",
+            "tags (category)": "Multi choose",
+            "selected products": "relationship"
+          }
+        }
+      ],
+      "tables": [
+        ["id", "event name", "host", "date", "Valid through", "availability"],
+        ["id", "name", "email", "type", "date"],
+        ["id", "event name", "influencer", "date", "Valid through", "status"]
+      ]
+    },
+
+    {
+      "name": "3600 stores",
+      "pages_count": 3,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "Add 3600 stores",
+          "steps": 1,
+          "fields": {
+            "select branch": "multi select",
+            "floor": "tree",
+            "name of floor": "text",
+            "number": "number",
+            "section": "tree",
+            "name of section": "text",
+            "section img": "img",
+            "scan": "tree",
+            "name of scan": "text",
+            "scan img": "img"
+          }
+        },
+        {
+          "type": "Edit store options",
+          "fields": {
+            "upload 360 images": "img",
+            "edit 360 images": "img",
+            "export 360 images": "img",
+            "open in 360 editor": "img"
+          }
+        }
+      ],
+      "tables": []
+    },
+    {
+      "name": "Video calls",
+      "pages_count": 4,
+      "exist": true,
+      "difference_points": ["No Forms", "table date", "need more screens"],
+      "forms": [
+        {
+          "type": "send an email",
+          "fields": {
+            "promocode": "multi select"
+          }
+        }
+      ],
+      "tables": [
+        [
+          "id",
+          "date",
+          "type",
+          "user",
+          "call status",
+          "Assigned to",
+          "Join vide "
+        ],
+        ["id", "date", "time", "type", "user", "Assigned to", "status"],
+        ["id", "date", "type", "user", "Assigned to", "rate"]
+      ]
+    },
+
+    {
+      "name": "Shared items",
+      "pages_count": 1,
+      "exist": false,
+      "difference_points": [],
+      "forms": [],
+      "tables": [
+        ["id", "product", "product name", "saved people", "brand", "Shared by"]
+      ]
+    },
+    {
+      "name": "Orders",
+      "pages_count": 0,
+      "exist": true,
+      "difference_points": ["Need more one screen"],
+      "forms": [
+        {
+          "type": "rejection order",
+          "fields": {
+            "reason": "text"
+          }
+        }
+      ],
+      "tables": [
+        [
+          "order id",
+          "creation date",
+          "shipping type",
+          "username",
+          "quantity",
+          "total price",
+          "payment",
+          "status"
+        ],
+        [
+          "return id",
+          "order id",
+          "creation date",
+          "payment",
+          "username",
+          "quantity",
+          "state"
+        ]
+      ]
+    },
+    {
+      "name": "receipts",
+      "pages_count": 2,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "receipts rejection",
+          "fields": {
+            "reason": "text"
+          }
+        }
+      ],
+      "tables": [
+        ["id", "branch", "upload data", "quantity", "user email", "state"]
+      ]
+    },
+    {
+      "name": "Customers",
+      "pages_count": 2,
+      "exist": true,
+      "difference_points": ["customer details page"],
+      "forms": [],
+      "tables": [["id", "user name", "email", "phone", "joined date"]]
+    },
+    {
+      "name": "Influencer requests",
+      "pages_count": 4,
+      "exist": false,
+      "difference_points": [],
+      "forms": [],
+      "tables": [
+        ["id", "name", "email", "phone", "joined date"],
+        [
+          "Influencer requests",
+          "name",
+          "email",
+          "phone",
+          "request data",
+          "state"
+        ]
+      ]
+    },
+    {
+      "name": "Admins",
+      "pages_count": 2,
+      "exist": true,
+      "difference_points": [
+        "forms need more fields: branch | organization | img"
+      ],
+      "forms": [],
+      "tables": [["id", "name", "email", "Role", "date"]]
+    },
+    {
+      "name": "",
+      "pages_count": 0,
+      "exist": false,
+      "difference_points": [],
+      "forms": [
+        {
+          "type": "",
+          "fields": {}
+        },
+        {
+          "type": "",
+          "fields": {}
+        }
+      ],
+      "tables": [["", "", "", "", "", ""]]
+    }
+  ]
+}

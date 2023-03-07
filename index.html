@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#f9f9f9]">
+    <div class="container mx-auto px-4 max-w-[1200px]">
+      <div class="flex gap-8 h-screen py-8">
+        <aside class="w-48 h-full bg-[#ffc107] rounded-md p-4">
+          <div id="sidebar--menu" class="flex flex-col gap-3 items-start"></div>
+        </aside>
+        <div class="bg-white p-4 rounded-md shadow flex-1 overflow-hidden">
+          <div id="statics" class="">
+            <h1 class="text-2xl mb-8">Results</h1>
+            <div class="flex flex-wrap gap-6" id="results"></div>
+          </div>
+          <div id="parts" class="overflow-auto h-full hidden">
+            <h1 class="capitalize text-2xl mt-4 mb-8">
+              Part:
+              <b id="part" class="bg-[#ffc107] text-black rounded-md p-2"
+                >Configuration</b
+              >
+            </h1>
+            <div class="mb-8 border-b pb-4 shadow bg-gray-100">
+              <h4
+                class="text-lg font-medium border-l-4 border-[#ffc107] pl-4 mb-4"
+              >
+                Main info
+              </h4>
+              <ul id="partInfo" class="grid md:grid-cols-2 gap-1 pl-6"></ul>
+            </div>
+            <div id="forms" class="mb-8 border-b shadow bg-gray-100">
+              <h4
+                class="text-lg font-medium border-l-4 border-[#ffc107] pl-4 mb-4"
+              >
+                Forms
+              </h4>
+              <div id="forms--content"></div>
+            </div>
+            <div id="tables--content" class="mb-8 shadow bg-gray-100"></div>
+            <div id="difference-content" class="bg-gray-100 shadow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
